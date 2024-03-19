@@ -1,0 +1,1 @@
+addToLeaderboard(app.name, app.health)

@@ -51,6 +51,8 @@ def keyPressedHelper(app, event):
     # if 'h' is pressed, we instantly go into helpMode
     if (event.key == 'h'):
         app.mode = 'helpMode'
+    elif (event.key=='l'):
+        app.mode='homeScreenMode'
     elif (event.key == 'q'):
         app.mode = 'bonusMode'
         app.bonusPressed = True

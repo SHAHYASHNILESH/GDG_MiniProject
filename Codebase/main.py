@@ -216,30 +216,43 @@ def homeScreenMode_drawWelcome(app, canvas, rustyPurple, mediumPurple, darkPurpl
                             fill=mediumPurple, outline=darkPurple)
     canvas.create_text(app.width/2, 75, 
         text=
-"""     Welcome to 
-112 TA Simulator!""", font="Times 35 bold italic", fill=darkPurple)
+"""     Welcome to Maze Simulator!""", font="Times 15 bold italic", fill=darkPurple)
 
 def homeScreenMode_drawRules(app, canvas, bolderPink, pink, darkPurple):
     # Block 2: Rules
-    canvas.create_rectangle(0 + 50, 145, 
-                            app.width - 50, app.height/2 - 50, 
-                            fill=pink, outline=bolderPink)
+    # canvas.create_rectangle(0 + 50, 145, 
+    #                         app.width - 50, app.height/2 - 50, 
+    #                          outline=bolderPink)
 
     canvas.create_text(app.width/2, app.height/2 - 150, 
 text = """
 Rules:
-- You are a 112 TA at Office Hours. In order to get to the student at the top of the Office Hour Queue, you must go through a maze and 
+- You are a Maze Simulator at Office Hours. In order to get to the student at the top of the Office Hour Queue, you must go through a maze and 
   find them at the end. However, throughout the maze are students, who are not on the OHQ, and they want to bug you with questions. 
-  You must avoid them and get to the end of the maze as fast as you can without bumping into any students in the maze. 
+-You must avoid them and get to the end of the maze as fast as you can without bumping into any students in the maze. 
 - You begin with 20 health, each time you bump into a student in the maze, -10 health. 
 - However, if you run into a powerup, the maze students temporarily freeze.  
-- You can pick which algorithm you want to generate the maze (Prim's/Kruskal's)
 - Press 'r' to reset the game, and press 's' to show the highlighted solution.
 - Press 'h' for additional shortcut help. 
 How to begin the game:
 - Enter your name in the text editor below. 
 - Press 1 to begin the game. 
-""", font="Times 12", fill=darkPurple)
+""", font="Times 10", fill=darkPurple)
+
+# text = """
+# Rules:
+# - You are a 112 TA at Office Hours. In order to get to the student at the top of the Office Hour Queue, you must go through a maze and 
+#   find them at the end. However, throughout the maze are students, who are not on the OHQ, and they want to bug you with questions. 
+#   You must avoid them and get to the end of the maze as fast as you can without bumping into any students in the maze. 
+# - You begin with 20 health, each time you bump into a student in the maze, -10 health. 
+# - However, if you run into a powerup, the maze students temporarily freeze.  
+# - You can pick which algorithm you want to generate the maze (Prim's/Kruskal's)
+# - Press 'r' to reset the game, and press 's' to show the highlighted solution.
+# - Press 'h' for additional shortcut help. 
+# How to begin the game:
+# - Enter your name in the text editor below. 
+# - Press 1 to begin the game. 
+# """, font="Times 10", fill=darkPurple)
 
 def homeScreenMode_drawTextEditor(app, canvas, darkerBeige):
     # Block 3: Name
@@ -330,7 +343,7 @@ def helpMode_redrawAll(app, canvas):
 """, font=font)
 
     canvas.create_text(app.width/2, app.height/2, text='Shortcut commands', 
-        font='Times 16 bold')
+        font='Times 14 bold')
     canvas.create_text(app.width/2, app.height/2 + 150, text=
 """ 
     Game Mode:
@@ -669,7 +682,7 @@ def gameMode_timerFired(app):
 
 def gameMode_redrawAll(app, canvas):
     drawColors(app, canvas)
-    drawPKButtons(app, canvas)
+    # drawPKButtons(app, canvas)
     drawOHQStudent(app, canvas)
     drawMazeWalls(app, canvas)
     drawStartStopBoxes(app, canvas)
@@ -678,7 +691,7 @@ def gameMode_redrawAll(app, canvas):
     drawGhostStudentSolution2(app, canvas)
     
     drawTextAtTop(app, canvas)
-    drawPowerUp(app, canvas)
+    # drawPowerUp(app, canvas)
     drawPopUpGameOver(app, canvas)
     drawHealth(app, canvas)
     drawTA(app, canvas)

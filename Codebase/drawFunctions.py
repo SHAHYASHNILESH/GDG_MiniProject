@@ -57,15 +57,15 @@ def drawColors(app, canvas):
                             app.height - (1.5*app.margin) + 20 + 2, 
                             fill="Black", outline="Black")
 
-def drawPKButtons(app, canvas):
-    # Prim / Kruskal Buttons
-    canvas.create_text(375, 700, text=
-"""Generate a new maze with either  
-  Prim's or Kruskals's algorithm.""", fill="Black")
-    canvas.create_rectangle(250, 725, 350, 775, fill="Blue")
-    canvas.create_text(300, 750, text="Prim's", fill="White")
-    canvas.create_rectangle(400, 725, 500, 775, fill="Blue")
-    canvas.create_text(450, 750, text="Kruskals's", fill="White")
+# def drawPKButtons(app, canvas):
+    
+#     canvas.create_text(375, 700, text=
+# """Generate a new maze with either  
+#   Prim's or Kruskals's algorithm.""", fill="Black")
+#     canvas.create_rectangle(250, 725, 350, 775, fill="Blue")
+#     canvas.create_text(300, 750, text="Prim's", fill="White")
+#     canvas.create_rectangle(400, 725, 500, 775, fill="Blue")
+#     canvas.create_text(450, 750, text="Kruskals's", fill="White")
 
 def drawOHQStudent(app, canvas):
     # Idle Student Sprite Sheet Animation:
@@ -93,12 +93,37 @@ def drawTA(app, canvas):
     canvas.create_image(app.TA.playerX, app.TA.playerY, 
                         image=getCachedPhotoImage(app, spriteImage))
 
+# def drawTextAtTop(app, canvas):
+#     # Text at the top: 
+#     canvas.create_text(app.width/2, app.height/20, text=
+# """                Press h for help.
+#           Press r to reset the game.
+# Press s for help (highlighted solutions path).""")
+
 def drawTextAtTop(app, canvas):
     # Text at the top: 
     canvas.create_text(app.width/2, app.height/20, text=
 """                Press h for help.
           Press r to reset the game.
-Press s for help (highlighted solutions path).""")
+.""")
+
+# def drawPopUpGameOver(app, canvas):
+#     # Pop up if game over
+#     if app.showPopUp == True:
+#         canvas.create_rectangle(2*app.width/9, 3.75*app.height/9 - 20, 
+#                                 7*app.width/9, 5.25*app.height/9, 
+#                                 fill="Light Green")
+#         if app.health <= 0:
+#             canvas.create_text(app.width/2 - 20, app.height/2 - 35, 
+#                 text="You're health is too low.")
+#             canvas.create_text(app.width/2 + 80, app.height/2 - 35, 
+#                 text="FAIL", fill="Red", font="Times 15 bold underline")
+
+#         canvas.create_text(app.width/2, app.height/2, 
+#             text=
+# f"""You have reached the OHQ Student. Score = {app.health}
+#                   Press r to reset the game.
+#               Press q to play the bonus round.""", fill="Black")
 
 def drawPopUpGameOver(app, canvas):
     # Pop up if game over
@@ -116,7 +141,7 @@ def drawPopUpGameOver(app, canvas):
             text=
 f"""You have reached the OHQ Student. Score = {app.health}
                   Press r to reset the game.
-              Press q to play the bonus round.""", fill="Black")
+              Press l to go to the home screen.""", fill="Black")
 
 def drawStartStopBoxes(app, canvas):
     mazeWidth = app.width - 2*app.margin
@@ -175,15 +200,15 @@ def drawHealth(app, canvas):
         canvas.create_text(x, y+30, text="-10 Health!", fill="Red", 
             font="Helvetica 20 bold")
 
-def drawPowerUp(app, canvas):
-    x = app.powerUpX 
-    y = app.powerUpY 
-    r = 10
-    if app.reachedPowerUp == False:
-        if app.drawPowerUp == True:
-            canvas.create_oval(x - r, y - r, x + r, y + r, fill="Light Green")
-            canvas.create_text(x, y, text="P")
-    if app.reachedPowerUp == True:
-        if app.drawPowerUpMessage == True:
-            canvas.create_text(6*app.width/7 + 5, (app.width/12)-30, text="Power Up!", 
-                fill="Blue", font="Helvetica 16 bold")
+# def drawPowerUp(app, canvas):
+#     x = app.powerUpX 
+#     y = app.powerUpY 
+#     r = 10
+#     if app.reachedPowerUp == False:
+#         if app.drawPowerUp == True:
+#             canvas.create_oval(x - r, y - r, x + r, y + r, fill="Light Green")
+#             canvas.create_text(x, y, text="P")
+#     if app.reachedPowerUp == True:
+#         if app.drawPowerUpMessage == True:
+#             canvas.create_text(6*app.width/7 + 5, (app.width/12)-30, text="Power Up!", 
+#                 fill="Blue", font="Helvetica 16 bold")
