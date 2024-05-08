@@ -1,2 +1,3 @@
-Yash, 40
-Yash, 220
+, 140
+YASH, 50
+YASH, 180
